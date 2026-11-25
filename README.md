@@ -69,5 +69,17 @@ static/      CSS (Bootstrap and app.css)
 - No email verification or password reset by email
 - SQLite is used for simplicity; use PostgreSQL for a real deployment
 - Ideas: tags or folders, note previews, user-to-user sharing instead of share-with-everyone
+## Screenshots
 
+### Login Page
+![Login Page](Login.png.png)
+
+### Upload Notes
+![Upload Notes](Uploadnotes.png.png)
+
+### Edit Notes
+![Edit Notes](Editnotes.png.png)
+
+### Shared Notes
+![Shared Notes](sharenotes.png.png)
 
