@@ -70,6 +70,4 @@ static/      CSS (Bootstrap and app.css)
 - SQLite is used for simplicity; use PostgreSQL for a real deployment
 - Ideas: tags or folders, note previews, user-to-user sharing instead of share-with-everyone
 
-## Screenshots
 
-Add screenshots of the login page, your notes list and the upload form here.
