@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Delete note · Notes Sharing{% endblock %}
+{% block page_class %}narrow{% endblock %}
+{% block content %}
+  <h1 class="h3 mb-3">Delete this note?</h1>
+  <div class="panel">
+    <p><strong>{{ note.title }}</strong> and its uploaded file will be permanently removed.</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Delete</button>
+      <a class="btn btn-secondary" href="{% url 'notes:my_notes' %}">Cancel</a>
+    </form>
+  </div>
+{% endblock %}

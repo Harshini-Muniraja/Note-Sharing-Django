@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Shared notes · Notes Sharing{% endblock %}
+{% block content %}
+  <div class="page-head">
+    <h1>Shared notes</h1>
+  </div>
+  <form method="get" class="search" role="search">
+    <input type="search" name="q" value="{{ q }}" class="form-control" placeholder="Search by title or description" aria-label="Search shared notes">
+    <button type="submit" class="btn btn-secondary">Search</button>
+  </form>
+  {% if notes %}
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>Title</th><th>Shared by</th><th>Updated</th><th>Download</th></tr>
+        </thead>
+        <tbody>
+          {% for note in notes %}
+            <tr>
+              <td>
+                {{ note.title }}
+                {% if note.description %}<div class="muted">{{ note.description|truncatechars:80 }}</div>{% endif %}
+              </td>
+              <td>{{ note.owner.get_full_name|default:note.owner.get_username }}</td>
+              <td>{{ note.updated_at|date:"j M Y" }}</td>
+              <td class="actions"><a href="{% url 'notes:download' note.pk %}">Download</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="empty">{% if q %}No shared notes match “{{ q }}”.{% else %}Nobody has shared a note yet.{% endif %}</p>
+  {% endif %}
+{% endblock %}

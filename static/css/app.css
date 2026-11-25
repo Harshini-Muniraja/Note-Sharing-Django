@@ -1,0 +1,39 @@
+:root {
+  --ink: #1f2933;
+  --muted: #5f6b76;
+  --line: #d8dee4;
+  --paper: #f6f7f9;
+  --accent: #1d5c7a;
+  --accent-dark: #154560;
+}
+body { background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.55; }
+a { color: var(--accent); }
+.site-header { background: #fff; border-bottom: 1px solid var(--line); }
+.site-header .inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; max-width: 980px; margin: 0 auto; padding: 14px 20px; }
+.brand { font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+.site-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+.site-nav form { margin: 0; }
+.link-button { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
+.page { max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; }
+.narrow { max-width: 460px; }
+.page-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+.page-head h1 { font-size: 1.6rem; margin: 0; }
+.search { display: flex; gap: 8px; margin-bottom: 18px; }
+.panel { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 20px; }
+.table-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
+.table-wrap table { margin: 0; }
+.muted { color: var(--muted); font-size: .9rem; }
+.empty { color: var(--muted); padding: 28px 0; }
+.actions { white-space: nowrap; display: flex; gap: 10px; align-items: center; }
+.actions form { margin: 0; }
+.badge-shared, .badge-private { font-size: .78rem; padding: 2px 8px; border-radius: 10px; }
+.badge-shared { background: #dff0e6; color: #1b5e3a; }
+.badge-private { background: #eceff2; color: var(--muted); }
+.btn-primary { background: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.field { margin-bottom: 16px; }
+.field-error { color: #b42318; font-size: .9rem; }
+.form-text { color: var(--muted); font-size: .85rem; }
+.form-check { display: flex; align-items: center; gap: 8px; }
+.form-check .form-check-input { width: auto; }
+:focus-visible { outline: 3px solid #7fb3cf; outline-offset: 2px; }

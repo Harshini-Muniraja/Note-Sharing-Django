@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Sign up · Notes Sharing{% endblock %}
+{% block page_class %}narrow{% endblock %}
+{% block content %}
+  <h1 class="h3 mb-3">Create an account</h1>
+  <div class="panel">
+    <form method="post">
+      {% csrf_token %}
+      {% include "partials/form_fields.html" %}
+      <button type="submit" class="btn btn-primary">Sign up</button>
+    </form>
+  </div>
+  <p class="muted mt-3">Already registered? <a href="{% url 'accounts:login' %}">Log in</a></p>
+{% endblock %}
